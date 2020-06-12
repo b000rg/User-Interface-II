@@ -1,1 +1,109 @@
 /* Add CSS styling here */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+    background-color: #446161;
+}
+
+/* banner */
+div.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: darkslategray
+}
+
+div.banner h1 {
+    font-size: 4.2rem;
+    color: #fc9867;
+    margin: 0 2rem;
+}
+
+div.banner nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+    margin: 0 2rem;
+}
+
+div.banner a {
+    display: flex;
+    align-items: center;
+    height: 3.2rem;
+    background-color: #395858;
+    border: 1px solid black;
+    font-size: 1.6rem;
+    width: 24%;
+}
+
+div.banner a:hover {
+    background-color: #141F1F;
+}
+
+div.banner a p {
+    color: #fc9867;
+    text-align: center;
+    width: 100%;
+}
+/* /banner */
+
+/* big-picture */
+div.big-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60vh;
+    background-image: url("https://picsum.photos/1920/1080");
+    text-align: center;
+    margin: 5rem 0;
+}
+
+div.big-picture h2 {
+    font-size: 6rem;
+    font-family: 'Archivo', sans-serif;
+    color: #ab9df2;
+    margin: 3rem 0;
+    white-space: nowrap;
+}
+
+div.big-picture a {
+    font-size: 2.4rem;
+    color: #78dce8;
+    background-color: hsla(180, 22%, 10%, 0.9);
+    width: 20rem;
+}
+/* /big-picture */
+
+/* project-gallery */
+div.project-gallery {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+/* /project-gallery */
