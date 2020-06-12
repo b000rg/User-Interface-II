@@ -3,7 +3,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	margin: 0;
 	padding: 0;
 	border: 0;
-    font: inherit;
 	vertical-align: baseline;
 }
 
@@ -20,7 +19,7 @@ div.content-area {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Space Mono', monospace;
     background-color: #446161;
 }
 
@@ -29,9 +28,10 @@ div.banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 15vh;
     width: 100%;
-    background-color: darkslategray
+    background-color: darkslategray;
+    border-bottom: 2px dashed black;
 }
 
 div.banner h1 {
@@ -55,7 +55,7 @@ div.banner a {
     height: 3.2rem;
     background-color: #395858;
     border: 1px solid black;
-    font-size: 1.6rem;
+    font-size: 2rem;
     width: 24%;
 }
 
@@ -79,6 +79,7 @@ div.big-picture {
     width: 90%;
     height: 60vh;
     background-image: url("https://picsum.photos/1920/1080");
+    background-position: center;
     text-align: center;
     margin: 5rem 0;
 }
@@ -94,16 +95,81 @@ div.big-picture h2 {
 div.big-picture a {
     font-size: 2.4rem;
     color: #78dce8;
-    background-color: hsla(180, 22%, 10%, 0.9);
-    width: 20rem;
+    background-color: hsla(180, 22%, 10%, 0.75);
+    padding: 0.6rem 2rem;
+    max-width: 20rem;
+    border: 2px solid gray;
+    border-radius: 1.5rem;
 }
 /* /big-picture */
 
 /* project-gallery */
 div.project-gallery {
+    border-top: 5px ridge gray;
     display: flex;
-    width: 90%;
+    width: 95%;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+div.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 2.5rem;
+}
+
+div.project img {
+    margin: 1rem;
+}
+
+@keyframes project-title-grow {
+    from {padding: 0 1rem;}
+    to {padding: 1rem 2rem;}
+}
+
+@keyframes project-focus {
+    from {flex-grow: 0;}
+    to {flex-grow:1;}
+}
+
+div.project a.project-title {
+    font-size: 2.4rem;
+    padding: 0 1rem;
+    border: 2px groove #A9DC76;
+    background-color: #2D4B4B;
+    color: #A9DC76;
+}
+
+div.project:hover a.project-title {
+    animation-name: project-title-grow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+div.project:hover {
+    animation-name: project-focus;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
 /* /project-gallery */
+
+/* footer */
+div.content-area footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vw;
+    width: 100%;
+    background-color: #1F2041;
+}
+
+div.content-area footer a {
+    color: whitesmoke;
+    font-size: 2.4rem;
+    background-color: #282953;
+    border: 1px groove  black;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.2rem;
+}
+/* /footer */
