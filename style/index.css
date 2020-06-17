@@ -1,4 +1,6 @@
 /* Add CSS styling here */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Space+Mono&display=swap');
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -18,7 +20,7 @@ div.content-area {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     font-family: 'Space Mono', monospace;
     background-color: #446161;
 }
@@ -35,28 +37,28 @@ div.banner {
 }
 
 div.banner h1 {
-    font-size: 4.2rem;
+    font-size: 2.5rem;
     color: #fc9867;
-    margin: 0 2rem;
+    margin-left: 20px;
 }
 
 div.banner nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
+    width: 500px;
     height: 100%;
-    margin: 0 2rem;
+    margin-right: 20px;
 }
 
 div.banner a {
     display: flex;
     align-items: center;
-    height: 3.2rem;
+    height: 32px;
     background-color: #395858;
     border: 1px solid black;
     font-size: 2rem;
-    width: 24%;
+    width: 120px;
 }
 
 div.banner a:hover {
@@ -81,14 +83,14 @@ div.big-picture {
     background-image: url("https://picsum.photos/1920/1080");
     background-position: center;
     text-align: center;
-    margin: 5rem 0;
+    margin: 50px 0;
 }
 
 div.big-picture h2 {
     font-size: 6rem;
     font-family: 'Archivo', sans-serif;
     color: #ab9df2;
-    margin: 3rem 0;
+    margin: 30px 0;
     white-space: nowrap;
 }
 
@@ -96,10 +98,10 @@ div.big-picture a {
     font-size: 2.4rem;
     color: #78dce8;
     background-color: hsla(180, 22%, 10%, 0.75);
-    padding: 0.6rem 2rem;
-    max-width: 20rem;
+    padding: 6px 20px;
+    max-width: 200px;
     border: 2px solid gray;
-    border-radius: 1.5rem;
+    border-radius: 15px;
 }
 /* /big-picture */
 
@@ -116,16 +118,19 @@ div.project {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem 2.5rem;
+    margin: 50px 25px;
+    width: calc(100% - 25px);
+    object-fit: none;
 }
 
 div.project img {
-    margin: 1rem;
+    margin: 10px;
+    width: calc(100% - 10px);
 }
 
 @keyframes project-title-grow {
-    from {padding: 0 1rem;}
-    to {padding: 1rem 2rem;}
+    from {padding: 0 10px;}
+    to {padding: 10px 20px;}
 }
 
 @keyframes project-focus {
@@ -135,7 +140,7 @@ div.project img {
 
 div.project a.project-title {
     font-size: 2.4rem;
-    padding: 0 1rem;
+    padding: 0 1px;
     border: 2px groove #A9DC76;
     background-color: #2D4B4B;
     color: #A9DC76;
@@ -159,7 +164,7 @@ div.content-area footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 15vw;
+    height: 15vh;
     width: 100%;
     background-color: #1F2041;
 }
@@ -169,7 +174,54 @@ div.content-area footer a {
     font-size: 2.4rem;
     background-color: #282953;
     border: 1px groove  black;
-    padding: 0.5rem 1.2rem;
-    border-radius: 1.2rem;
+    padding: 5px 12px;
+    border-radius: 12px;
 }
 /* /footer */
+
+@media(max-width: 800px) {
+    div.banner {
+        height: 100px
+    }
+
+    div.banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    div.banner nav {
+        width: 300px;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 500px) {
+    div.banner {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 4rem;
+        margin-bottom: 6.5rem;
+    }
+    
+    div.banner h1 {
+        font-size: 2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    div.banner h1 br {
+        display: none;
+    }
+
+    div.banner nav {
+        margin: 0;
+    }
+
+    div.banner a {
+        margin: 5px;
+    }
+
+    div.big-picture h2 {
+        font-size: 4rem;
+    }
+
+
+}
