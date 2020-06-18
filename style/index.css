@@ -119,28 +119,29 @@ div.project {
     flex-direction: column;
     align-items: center;
     margin: 50px 25px;
-    width: calc(100% - 25px);
+    max-width: 500px;
     object-fit: none;
 }
 
 div.project img {
-    margin: 10px;
-    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 @keyframes project-title-grow {
-    from {padding: 0 10px;}
-    to {padding: 10px 20px;}
-}
-
-@keyframes project-focus {
-    from {flex-grow: 0;}
-    to {flex-grow:1;}
+    from {
+        padding: 0 10px;
+        font-size: 2.4rem;
+    }
+    to {
+        padding: 10px 20px;
+        font-size: 2.8rem;
+    }
 }
 
 div.project a.project-title {
     font-size: 2.4rem;
-    padding: 0 1px;
+    padding: 0 10px;
     border: 2px groove #A9DC76;
     background-color: #2D4B4B;
     color: #A9DC76;
@@ -148,12 +149,6 @@ div.project a.project-title {
 
 div.project:hover a.project-title {
     animation-name: project-title-grow;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-div.project:hover {
-    animation-name: project-focus;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
